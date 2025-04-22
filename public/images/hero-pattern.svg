@@ -1,0 +1,32 @@
+<svg width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.15">
+    <path d="M1439.5 679L1258 596.5L1314.5 515.5L1439.5 679Z" stroke="currentColor" stroke-width="1"/>
+    <path d="M1439.5 386.5L1323 321L1336.5 234.5L1439.5 386.5Z" stroke="currentColor" stroke-width="1"/>
+    <path d="M1439.5 176.5L1220.5 61.5L1264.5 -48L1439.5 176.5Z" stroke="currentColor" stroke-width="1"/>
+    <path d="M1241.5 478L1045.5 387L1167 291.5L1241.5 478Z" stroke="currentColor" stroke-width="1"/>
+    <path d="M1186.5 775L1071.5 710.5L1124.5 632.5L1186.5 775Z" stroke="currentColor" stroke-width="1"/>
+    <path d="M766.5 875L666 821.5L724 735.5L766.5 875Z" stroke="currentColor" stroke-width="1"/>
+    <path d="M635 1021L400.5 866L532.5 695.5L635 1021Z" stroke="currentColor" stroke-width="1"/>
+    <path d="M0 848L113.5 760.5L149 870L0 848Z" stroke="currentColor" stroke-width="1"/>
+    <path d="M0 1.00001L135 85L0 193.5L0 1.00001Z" stroke="currentColor" stroke-width="1"/>
+    <path d="M1050.5 -1.5L972.5 198L778 -1.5L1050.5 -1.5Z" stroke="currentColor" stroke-width="1"/>
+    <path d="M694.5 383.5L502 227.5L685 153L694.5 383.5Z" stroke="currentColor" stroke-width="1"/>
+    <path d="M359 457L255 349L373.5 291.5L359 457Z" stroke="currentColor" stroke-width="1"/>
+    <path d="M0 503.5L139 407.5L146 538.5L0 503.5Z" stroke="currentColor" stroke-width="1"/>
+    <circle cx="1314" cy="388" r="3" fill="currentColor"/>
+    <circle cx="1242" cy="478" r="3" fill="currentColor"/>
+    <circle cx="1167" cy="292" r="3" fill="currentColor"/>
+    <circle cx="1072" cy="710" r="3" fill="currentColor"/>
+    <circle cx="1124" cy="633" r="3" fill="currentColor"/>
+    <circle cx="972" cy="198" r="3" fill="currentColor"/>
+    <circle cx="778" cy="-2" r="3" fill="currentColor"/>
+    <circle cx="685" cy="153" r="3" fill="currentColor"/>
+    <circle cx="502" cy="227" r="3" fill="currentColor"/>
+    <circle cx="532" cy="696" r="3" fill="currentColor"/>
+    <circle cx="373" cy="292" r="3" fill="currentColor"/>
+    <circle cx="255" cy="349" r="3" fill="currentColor"/>
+    <circle cx="149" cy="870" r="3" fill="currentColor"/>
+    <circle cx="139" cy="407" r="3" fill="currentColor"/>
+    <circle cx="146" cy="538" r="3" fill="currentColor"/>
+  </g>
+</svg> 

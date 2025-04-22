@@ -1,12 +1,27 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/toaster';
+import { Outfit, Quicksand } from 'next/font/google';
+import { CatThemeProvider } from '@/components/cat-theme-provider';
+import { Toaster } from 'sonner';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import CustomCursor from '@/components/custom-cursor';
+import PageTransition from '@/components/page-transition';
+import ParallaxBackground from '@/components/parallax-background';
 
-const inter = Inter({ subsets: ['latin'] });
+// Font configuration with variable support for better performance
+const outfit = Outfit({ 
+  subsets: ['latin'],
+  variable: '--font-outfit',
+  display: 'swap',
+});
+
+const quicksand = Quicksand({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-quicksand',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tonmoyiv.com'),
@@ -69,24 +84,38 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${outfit.variable} ${quicksand.variable}`}>
       <head>
         <link rel="canonical" href="https://tonmoyiv.com" />
       </head>
-      <body className={inter.className}>
-        <ThemeProvider
+      <body className="font-sans">
+        <CatThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultFlavor="mocha"
           enableSystem
           disableTransitionOnChange
         >
+          <CustomCursor color="lavender" trailEffect={true} />
+          <ParallaxBackground />
           <div className="relative flex min-h-screen flex-col">
             <Header />
-            <main className="flex-1">{children}</main>
+            <PageTransition>
+              <main className="flex-1">{children}</main>
+            </PageTransition>
             <Footer />
           </div>
-          <Toaster />
-        </ThemeProvider>
+          <Toaster 
+            position="top-right"
+            toastOptions={{
+              style: {
+                background: 'var(--background)',
+                color: 'var(--foreground)',
+                border: '1px solid var(--border)',
+              },
+              className: 'glass',
+            }}
+          />
+        </CatThemeProvider>
       </body>
     </html>
   );

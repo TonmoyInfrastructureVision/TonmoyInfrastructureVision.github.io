@@ -1,0 +1,109 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#0f172a"/>
+  
+  <!-- Background Grid -->
+  <path d="M0 50H1200M0 100H1200M0 150H1200M0 200H1200M0 250H1200M0 300H1200M0 350H1200M0 400H1200M0 450H1200M0 500H1200M0 550H1200M0 600H1200M0 650H1200" stroke="white" stroke-opacity="0.05"/>
+  <path d="M50 0V675M100 0V675M150 0V675M200 0V675M250 0V675M300 0V675M350 0V675M400 0V675M450 0V675M500 0V675M550 0V675M600 0V675M650 0V675M700 0V675M750 0V675M800 0V675M850 0V675M900 0V675M950 0V675M1000 0V675M1050 0V675M1100 0V675M1150 0V675" stroke="white" stroke-opacity="0.05"/>
+  
+  <!-- Dashboard UI Elements -->
+  <!-- Header -->
+  <rect x="50" y="50" width="1100" height="60" rx="8" fill="#1e293b"/>
+  <rect x="80" y="70" width="180" height="20" rx="4" fill="#3b82f6" fill-opacity="0.8"/>
+  <circle cx="1080" cy="80" r="15" fill="#64748b" fill-opacity="0.5"/>
+  <circle cx="1130" cy="80" r="15" fill="#64748b" fill-opacity="0.5"/>
+  
+  <!-- Sidebar -->
+  <rect x="50" y="130" width="220" height="495" rx="8" fill="#1e293b"/>
+  <rect x="80" y="170" width="160" height="20" rx="4" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="80" y="220" width="160" height="20" rx="4" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="80" y="270" width="160" height="20" rx="4" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="80" y="320" width="160" height="20" rx="4" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="80" y="370" width="160" height="20" rx="4" fill="#64748b" fill-opacity="0.5"/>
+  
+  <!-- Main Content -->
+  <!-- Stats Cards -->
+  <rect x="300" y="130" width="220" height="100" rx="8" fill="#1e293b"/>
+  <rect x="330" y="150" width="100" height="15" rx="4" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="330" y="180" width="160" height="30" rx="4" fill="#3b82f6" fill-opacity="0.6"/>
+  
+  <rect x="550" y="130" width="220" height="100" rx="8" fill="#1e293b"/>
+  <rect x="580" y="150" width="100" height="15" rx="4" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="580" y="180" width="160" height="30" rx="4" fill="#10b981" fill-opacity="0.6"/>
+  
+  <rect x="800" y="130" width="220" height="100" rx="8" fill="#1e293b"/>
+  <rect x="830" y="150" width="100" height="15" rx="4" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="830" y="180" width="160" height="30" rx="4" fill="#ef4444" fill-opacity="0.6"/>
+  
+  <rect x="1050" y="130" width="100" height="100" rx="8" fill="#1e293b"/>
+  <circle cx="1100" cy="180" r="30" fill="#64748b" fill-opacity="0.3"/>
+  <path d="M1100 180 L1100 160 A20 20 0 0 1 1116 170 Z" fill="#3b82f6" fill-opacity="0.8"/>
+  <path d="M1100 180 L1116 170 A20 20 0 0 1 1108 194 Z" fill="#10b981" fill-opacity="0.8"/>
+  <path d="M1100 180 L1108 194 A20 20 0 0 1 1080 185 Z" fill="#ef4444" fill-opacity="0.8"/>
+  <path d="M1100 180 L1080 185 A20 20 0 0 1 1100 160 Z" fill="#eab308" fill-opacity="0.8"/>
+  
+  <!-- Chart Area -->
+  <rect x="300" y="260" width="850" height="220" rx="8" fill="#1e293b"/>
+  <rect x="330" y="280" width="150" height="20" rx="4" fill="#64748b" fill-opacity="0.5"/>
+  
+  <!-- Line Chart -->
+  <path d="M350 400 L450 370 L550 420 L650 350 L750 380 L850 330 L950 360 L1050 320" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="350" cy="400" r="4" fill="#3b82f6"/>
+  <circle cx="450" cy="370" r="4" fill="#3b82f6"/>
+  <circle cx="550" cy="420" r="4" fill="#3b82f6"/>
+  <circle cx="650" cy="350" r="4" fill="#3b82f6"/>
+  <circle cx="750" cy="380" r="4" fill="#3b82f6"/>
+  <circle cx="850" cy="330" r="4" fill="#3b82f6"/>
+  <circle cx="950" cy="360" r="4" fill="#3b82f6"/>
+  <circle cx="1050" cy="320" r="4" fill="#3b82f6"/>
+  
+  <!-- X Axis -->
+  <line x1="330" y1="440" x2="1120" y2="440" stroke="#64748b" stroke-opacity="0.2" stroke-width="1"/>
+  <rect x="350" y="450" width="15" height="10" rx="2" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="450" y="450" width="15" height="10" rx="2" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="550" y="450" width="15" height="10" rx="2" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="650" y="450" width="15" height="10" rx="2" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="750" y="450" width="15" height="10" rx="2" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="850" y="450" width="15" height="10" rx="2" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="950" y="450" width="15" height="10" rx="2" fill="#64748b" fill-opacity="0.5"/>
+  <rect x="1050" y="450" width="15" height="10" rx="2" fill="#64748b" fill-opacity="0.5"/>
+  
+  <!-- Server Status Table -->
+  <rect x="300" y="510" width="850" height="115" rx="8" fill="#1e293b"/>
+  <rect x="330" y="530" width="150" height="20" rx="4" fill="#64748b" fill-opacity="0.5"/>
+  
+  <!-- Table Headers -->
+  <rect x="330" y="560" width="120" height="15" rx="2" fill="#64748b" fill-opacity="0.3"/>
+  <rect x="480" y="560" width="120" height="15" rx="2" fill="#64748b" fill-opacity="0.3"/>
+  <rect x="630" y="560" width="120" height="15" rx="2" fill="#64748b" fill-opacity="0.3"/>
+  <rect x="780" y="560" width="120" height="15" rx="2" fill="#64748b" fill-opacity="0.3"/>
+  <rect x="930" y="560" width="120" height="15" rx="2" fill="#64748b" fill-opacity="0.3"/>
+  
+  <!-- Table Row 1 -->
+  <rect x="330" y="585" width="100" height="12" rx="2" fill="#64748b" fill-opacity="0.2"/>
+  <rect x="480" y="585" width="40" height="12" rx="2" fill="#10b981" fill-opacity="0.6"/>
+  <rect x="630" y="585" width="60" height="12" rx="2" fill="#64748b" fill-opacity="0.2"/>
+  <rect x="780" y="585" width="80" height="12" rx="2" fill="#64748b" fill-opacity="0.2"/>
+  <rect x="930" y="585" width="60" height="12" rx="2" fill="#64748b" fill-opacity="0.2"/>
+  
+  <!-- Table Row 2 -->
+  <rect x="330" y="610" width="100" height="12" rx="2" fill="#64748b" fill-opacity="0.2"/>
+  <rect x="480" y="610" width="40" height="12" rx="2" fill="#eab308" fill-opacity="0.6"/>
+  <rect x="630" y="610" width="60" height="12" rx="2" fill="#64748b" fill-opacity="0.2"/>
+  <rect x="780" y="610" width="80" height="12" rx="2" fill="#64748b" fill-opacity="0.2"/>
+  <rect x="930" y="610" width="60" height="12" rx="2" fill="#64748b" fill-opacity="0.2"/>
+  
+  <!-- Glowing Effect for Eye Candy -->
+  <circle cx="600" cy="337" r="100" fill="url(#paint0_radial)" fill-opacity="0.2"/>
+  <circle cx="900" cy="250" r="70" fill="url(#paint1_radial)" fill-opacity="0.1"/>
+  
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 337) rotate(90) scale(100)">
+      <stop stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(900 250) rotate(90) scale(70)">
+      <stop stop-color="#ef4444"/>
+      <stop offset="1" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg> 

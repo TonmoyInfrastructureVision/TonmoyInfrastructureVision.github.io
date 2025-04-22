@@ -4,44 +4,56 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
-import { Menu, X, CircuitBoard, Home, Wrench, FolderGit2, Users, BookOpen } from "lucide-react";
+import { Menu, X, CircuitBoard, Home, Wrench, FolderGit2, Users, BookOpen, CalendarClock, Mail, ChevronDown } from "lucide-react";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { CatButton } from "@/components/ui/cat-button";
+import { CatBadge } from "@/components/ui/cat-badge";
 
 const routes = [
   {
     href: "/",
     label: "Home",
-    icon: <Home className="h-4 w-4 text-blue-500" />,
+    icon: <Home className="h-4 w-4 text-blue" />,
   },
   {
     href: "/services",
     label: "Services",
-    icon: <Wrench className="h-4 w-4 text-green-500" />,
+    icon: <Wrench className="h-4 w-4 text-green" />,
   },
   {
     href: "/projects",
     label: "Projects",
-    icon: <FolderGit2 className="h-4 w-4 text-purple-500" />,
+    icon: <FolderGit2 className="h-4 w-4 text-mauve" />,
   },
   {
     href: "/about",
     label: "About",
-    icon: <Users className="h-4 w-4 text-orange-500" />,
+    icon: <Users className="h-4 w-4 text-peach" />,
   },
   {
     href: "/snigdha",
     label: "Snigdha OS",
-    icon: <BookOpen className="h-4 w-4 text-teal-500" />,
+    icon: <BookOpen className="h-4 w-4 text-teal" />,
   },
   {
     href: "/blog",
     label: "Blog",
-    icon: <BookOpen className="h-4 w-4 text-red-500" />,
+    icon: <BookOpen className="h-4 w-4 text-red" />,
+  },
+  {
+    href: "/schedule-meeting",
+    label: "Schedule Meeting",
+    icon: <CalendarClock className="h-4 w-4 text-yellow" />,
   },
 ];
 
@@ -62,7 +74,7 @@ export default function Header() {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/95 backdrop-blur-sm border-b shadow-sm"
+          ? "glass border-b shadow-sm"
           : "bg-transparent"
       )}
     >
@@ -70,7 +82,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2">
-              <CircuitBoard className="h-6 w-6 text-primary" />
+              <CircuitBoard className="h-6 w-6 text-lavender" />
               <span className="font-bold text-lg hidden sm:inline-block">
                 Tonmoy I&V
               </span>
@@ -92,18 +104,36 @@ export default function Header() {
 
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <Button asChild className="hidden md:inline-flex">
-              <Link href="/contact">Contact Us</Link>
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild className="hidden md:inline-flex">
+                <CatButton variant="lavender" glow>
+                  Contact Us <ChevronDown className="ml-2 h-4 w-4" />
+                </CatButton>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="glass backdrop-blur-md">
+                <DropdownMenuItem asChild>
+                  <Link href="/contact" className="flex items-center">
+                    <Mail className="mr-2 h-4 w-4 text-blue" />
+                    <span>Contact Form</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/schedule-meeting" className="flex items-center">
+                    <CalendarClock className="mr-2 h-4 w-4 text-mauve" />
+                    <span>Schedule Meeting</span>
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             <Sheet>
               <SheetTrigger asChild className="md:hidden">
-                <Button variant="outline" size="icon">
+                <CatButton variant="outline" size="icon">
                   <Menu className="h-5 w-5" />
                   <span className="sr-only">Toggle navigation menu</span>
-                </Button>
+                </CatButton>
               </SheetTrigger>
-              <SheetContent side="right">
+              <SheetContent side="right" className="glass backdrop-blur-md">
                 <div className="flex flex-col space-y-4 mt-8">
                   {routes.map((route) => (
                     <Link
@@ -115,9 +145,15 @@ export default function Header() {
                       {route.label}
                     </Link>
                   ))}
-                  <Button asChild className="mt-2">
+                  <CatButton asChild className="mt-2" variant="sapphire" glow>
                     <Link href="/contact">Contact Us</Link>
-                  </Button>
+                  </CatButton>
+                  <CatButton asChild variant="lavender" className="mt-2">
+                    <Link href="/schedule-meeting" className="flex items-center">
+                      <CalendarClock className="mr-2 h-4 w-4" />
+                      Schedule Meeting
+                    </Link>
+                  </CatButton>
                 </div>
               </SheetContent>
             </Sheet>
