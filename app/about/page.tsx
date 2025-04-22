@@ -6,28 +6,10 @@ import { CheckCircle2 } from "lucide-react";
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: "Jane Smith",
+      name: "Eshan Roy",
       role: "Founder & CEO",
-      bio: "With 15+ years in infrastructure design and security architecture, Jane leads our vision for innovative technological solutions.",
-      image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg"
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO",
-      bio: "Michael brings deep expertise in cloud architecture, DevOps practices, and system optimization to drive our technical excellence.",
-      image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg"
-    },
-    {
-      name: "Aisha Patel",
-      role: "Head of Cybersecurity",
-      bio: "Aisha's background in offensive security and compliance frameworks ensures our solutions maintain the highest security standards.",
-      image: "https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg"
-    },
-    {
-      name: "Robert Kang",
-      role: "Lead DevOps Engineer",
-      bio: "Robert specializes in building scalable CI/CD pipelines and infrastructure automation for enterprise environments.",
-      image: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg"
+      bio: "Eshan leads our vision for innovative technological solutions.",
+      image: "https://avatars.githubusercontent.com/u/59612243"
     }
   ];
   
@@ -145,22 +127,24 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="group">
-                <div className="relative h-72 rounded-lg overflow-hidden mb-4">
-                  <Image 
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+          <div className="grid grid-cols-1 place-items-center">
+            <div className="max-w-sm w-full">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="group">
+                  <div className="relative h-72 rounded-lg overflow-hidden mb-4">
+                    <Image 
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                  <p className="text-primary font-medium mb-2">{member.role}</p>
+                  <p className="text-muted-foreground text-sm">{member.bio}</p>
                 </div>
-                <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                <p className="text-primary font-medium mb-2">{member.role}</p>
-                <p className="text-muted-foreground text-sm">{member.bio}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
