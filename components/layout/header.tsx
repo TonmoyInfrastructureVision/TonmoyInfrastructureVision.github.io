@@ -34,6 +34,11 @@ const routes = [
     icon: <Users className="h-4 w-4 text-orange-500" />,
   },
   {
+    href: "/snigdha",
+    label: "Snigdha OS",
+    icon: <BookOpen className="h-4 w-4 text-teal-500" />,
+  },
+  {
     href: "/blog",
     label: "Blog",
     icon: <BookOpen className="h-4 w-4 text-red-500" />,
