@@ -203,9 +203,9 @@ export default function Home() {
               
               {/* Dashboard image */}
               <div className="aspect-video bg-gradient-to-br from-background to-muted relative">
-                <img 
-                  src="/images/dashboard-preview.jpg" 
-                  alt="Infrastructure Dashboard" 
+              <img 
+                src="/images/dashboard-preview.jpg" 
+                alt="Infrastructure Dashboard" 
                   className="w-full h-full object-cover opacity-90"
                 />
                 
