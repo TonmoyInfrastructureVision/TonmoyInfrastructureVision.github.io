@@ -50,11 +50,11 @@ const routes = [
     label: "Blog",
     icon: <BookOpen className="h-4 w-4 text-red" />,
   },
-  {
-    href: "/schedule-meeting",
-    label: "Schedule Meeting",
-    icon: <CalendarClock className="h-4 w-4 text-yellow" />,
-  },
+  // {
+  //   href: "/schedule-meeting",
+  //   label: "Schedule Meeting",
+  //   icon: <CalendarClock className="h-4 w-4 text-yellow" />,
+  // },
 ];
 
 export default function Header() {
