@@ -54,12 +54,21 @@ const cardVariants = cva(
   }
 );
 
-export interface CatCardProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof cardVariants> {}
+type CardBaseProps = {
+  className?: string;
+  variant?: VariantProps<typeof cardVariants>["variant"];
+  shadow?: VariantProps<typeof cardVariants>["shadow"];
+  color?: VariantProps<typeof cardVariants>["color"];
+  hover?: VariantProps<typeof cardVariants>["hover"];
+  animated?: VariantProps<typeof cardVariants>["animated"];
+}
+
+export type CatCardProps = CardBaseProps & Omit<React.HTMLAttributes<HTMLDivElement>, 'className'>;
 
 const CatCard = React.forwardRef<HTMLDivElement, CatCardProps>(
   ({ className, variant, shadow, color, hover, animated, ...props }, ref) => {
+    const cardClassName = cn(cardVariants({ variant, shadow, color, hover, animated, className }));
+    
     if (animated) {
       return (
         <motion.div
@@ -69,8 +78,8 @@ const CatCard = React.forwardRef<HTMLDivElement, CatCardProps>(
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           whileHover={hover ? { y: -8 } : {}}
-          className={cn(cardVariants({ variant, shadow, color, hover, animated, className }))}
-          {...props}
+          className={cardClassName}
+          {...props as any}
         />
       );
     }
@@ -78,7 +87,7 @@ const CatCard = React.forwardRef<HTMLDivElement, CatCardProps>(
     return (
       <div
         ref={ref}
-        className={cn(cardVariants({ variant, shadow, color, hover, animated, className }))}
+        className={cardClassName}
         {...props}
       />
     );
