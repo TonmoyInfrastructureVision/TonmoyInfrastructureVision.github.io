@@ -59,11 +59,16 @@ const badgeVariants = cva(
   }
 );
 
-export interface BadgeProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    Omit<VariantProps<typeof badgeVariants>, "animated"> {
+type BadgeBaseProps = {
+  className?: string;
+  variant?: VariantProps<typeof badgeVariants>["variant"];
+  glow?: VariantProps<typeof badgeVariants>["glow"];
+  size?: VariantProps<typeof badgeVariants>["size"];
+  pill?: VariantProps<typeof badgeVariants>["pill"];
   animated?: boolean;
 }
+
+export type BadgeProps = BadgeBaseProps & Omit<React.HTMLAttributes<HTMLDivElement>, 'className'>;
 
 function CatBadge({
   className,
@@ -74,21 +79,23 @@ function CatBadge({
   animated = false,
   ...props
 }: BadgeProps) {
+  const badgeClassName = cn(badgeVariants({ variant, glow, size, pill, className }));
+  
   if (animated) {
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
-        className={cn(badgeVariants({ variant, glow, size, pill, className }))}
-        {...props}
+        className={badgeClassName}
+        {...props as any}
       />
     );
   }
   
   return (
     <div
-      className={cn(badgeVariants({ variant, glow, size, pill, className }))}
+      className={badgeClassName}
       {...props}
     />
   );
